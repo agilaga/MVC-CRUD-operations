@@ -1,0 +1,34 @@
+﻿@using MVC__14_dekabr.Models
+@model List<Orders>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<a class="btn btn-primary" href="/Home/Yeni">New user</a>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Duzelis et</th>
+            <th>Sil</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ordr in Model)
+        {
+            <tr>
+                <td>@ordr.OrderID</td>
+                <td>@ordr.ShipName</td>
+                <td><a class=" btn btn-primary btn-danger" href="/Home/Update/@ordr.OrderID">Edit</a></td>
+                <td><a class=" btn btn-primary btn-warning" href="Home/Delete/@ordr.OrderID">Sil</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>

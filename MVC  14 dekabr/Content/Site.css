@@ -1,0 +1,30 @@
+﻿html, body {
+    margin: 0;
+    min-height: 100%;
+    height: 100%;
+    width: 100%;
+}
+footer {
+    padding: 2rem 3rem 3rem 5rem;
+}
+
+.main-cont {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.header-link {
+    padding: 1.5rem;
+}
+
+main {
+    flex-grow: 1;
+    padding: 5rem;
+}
